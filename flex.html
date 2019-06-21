@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>flex</title>
+    </head>
+    
+<style>
+body{
+    background: rgb(119, 117, 117);
+}
+@media(min-width: 468px){
+  .container {
+  padding-top: 80px;
+  text-align: center;
+  font-family: monaco, monospace;
+  display: flex
+}
+}
+
+.heading, .subheading {
+  background: #fff;
+  border: 2px #ccc solid;
+  
+}
+
+#heading {
+  font-size: 20px;
+  flex: 1;
+  background-color: azure;
+ 
+}
+.subheading {
+  font-size: 20px;
+  flex:1;
+}
+.input{
+  display: flex;
+  background-color: #fff
+  
+}
+#myinp{
+  flex: 1;
+  
+}
+p{
+    color:aqua;
+}
+</style>
+
+<body>
+<div class='container'>
+<button id="heading" >Click</button>
+<button class="subheading">(a realtime html + css editor)</button>
+</div>
+
+<div class='input'>
+<label for='myinp'>name: </label>
+<div id='myinp'></div>
+</div>
+
+<script>  
+document.getElementById('heading').addEventListener('click', display);
+
+function display(name){
+    document.getElementById('myinp').innerHTML = name;
+  }
+
+</script>
+</body>
+</html>
